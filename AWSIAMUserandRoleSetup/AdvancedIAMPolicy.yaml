@@ -1,5 +1,8 @@
 #Fill account_no, Service_name and region before using this
-
+#<region>:us-east-1, <account_no>: 
+#Finding Your AWS Account ID
+#To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, 
+#and then choose Support Center. Your currently signed-in account number (ID) appears in the Support Center title bar.
 {
   "Version": "2012-10-17",
   "Statement": [
