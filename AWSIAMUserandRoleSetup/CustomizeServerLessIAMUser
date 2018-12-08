@@ -1,0 +1,26 @@
+This section covers details on how to setup the IAM user, Required policies to be attached for building a serverkless application in a non-trusted environment. 
+This does not cover the generic access (Giving direct admin access to IAM user, which is very basic and works fine only in trusted environment, which will not work in realtime environment).
+
+After creating the IAM user (Refer to section BasicServerLessIAMUserSetupNotes.txt)
+Customizing the IAM user access is based on the IAM Policies.
+
+The permissions required can be categorized into the following areas:
+
+Permissions required by Serverless Framework
+Permissions required by your Serverless Framework plugins
+Permissions required by your Lambda code
+
+Granting AdministratorAccess policy ensures that your project will always have the necessary permissions. 
+But if you want to create an IAM policy that grants the minimal set of permissions, you need to customize your IAM policy.
+
+A basic Serverless project needs permissions to the following AWS services:
+
+CloudFormation to create change set and update stack
+S3 to upload and store Serverless artifacts and Lambda source code
+CloudWatch Logs to store Lambda execution logs
+IAM to manage policies for the Lambda IAM Role
+API Gateway to manage API endpoints
+Lambda to manage Lambda functions
+EC2 to execute Lambda in VPC
+CloudWatch Events to manage CloudWatch event triggers
+
